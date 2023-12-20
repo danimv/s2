@@ -29,14 +29,14 @@ const Header = () => {
         <Link to={""}>
           <div className="flex max-w-4xl mx-auto ">
             <img src={logo} className="rounded-full h-20 " />
-            <h2 className=" font-bold text-2xl text-green-700 dark:text-red-700  p-4  md: hidden md:flex  ">
+            <h2 className=" font-bold text-2xl text-green-600 dark:text-red-700  p-4  md: hidden md:flex  ">
              Global Regeneration
             </h2>
           </div>
         </Link>
 
         <div className="flex items-center gap-4 md:gap-7">
-          <nav className="gap-4 md:gap-6 text-green-700 text-base md:text-lg hidden md:flex">
+          <nav className="gap-4 md:gap-6 text-green-600 text-base md:text-lg hidden md:flex">
             <Link to={""}>Inici</Link>
             {/* <Link to={"menu/646b5548acd0a88a674b9429"}>Menu</Link> */}
             <Link to={"about"}>Sobre</Link>
@@ -55,7 +55,7 @@ const Header = () => {
               {userData.image ? (
                 <img src={userData.image} className="h-full w-full" />
               ) : (
-                <HiOutlineUserCircle className="font-bold text-green-700" />
+                <HiOutlineUserCircle className="font-bold text-green-600" />
               )}
             </div>
             {showMenu && (
