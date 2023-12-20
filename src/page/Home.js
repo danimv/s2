@@ -30,13 +30,8 @@ const Home = () => {
             <img src="https://cdn-icons-png.flaticon.com/512/2972/2972185.png" className="h-7" />
           </div>
           <h2 className="text-4xl md:text-7xl font-bold py-3">
-            The Fasted Delivery in <span className="text-red-600 text-">Your Home</span>
-          </h2>
-          <p className="py-3 text-base ">
-            Seamless Online Experience: Our user-friendly platform is designed to enhance your shopping experience. With
-            easy navigation, detailed product descriptions, and secure payment options, we aim to make your ordering
-            process hassle-free and enjoyable.
-          </p>
+            Regeneracions del dia
+          </h2>          
           <button className="font-bold bg-red-500 text-slate-200 px-4 py-2 rounded-md">Order Now</button>
         </div>
 
@@ -45,12 +40,12 @@ const Home = () => {
             ? homeProductCartList.map((el) => {
                 return (
                   <HomeCard
-                    key={el._id}
+                    // key={el._id}
                     id={el._id}
-                    image={el.image}
+                    // image={el.image}
                     name={el.name}
-                    price={el.price}
-                    category={el.category}
+                    quantitat={el.quantitat}
+                    tipus={el.tipus}
                   />
                 );
               })

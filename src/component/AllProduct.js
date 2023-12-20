@@ -5,7 +5,7 @@ import FilterProduct from "./FilterProduct";
 
 const AllProduct = ({ heading }) => {
   const productData = useSelector((state) => state.product.productList);
-  const categoryList = [...new Set(productData.map((el) => el.category))];
+  const categoryList = [...new Set(productData.map((el) => el.tipus))];
 
   //filter data display
   const [filterby, setFilterBy] = useState("");
@@ -18,7 +18,7 @@ const AllProduct = ({ heading }) => {
   const handleFilterProduct = (category) => {
     setFilterBy(category);
     const filter = productData.filter(
-      (el) => el.category.toLowerCase() === category.toLowerCase()
+      (el) => el.tipus.toLowerCase() === category.toLowerCase()
     );
     setDataFilter(() => {
       return [...filter];
@@ -38,7 +38,7 @@ const AllProduct = ({ heading }) => {
               <FilterProduct
                 category={el}
                 key={el}
-                isActive={el.toLowerCase() === filterby.toLowerCase()}
+                isActive={el === filterby.toLowerCase()}
                 onClick={() => handleFilterProduct(el)}
               />
             );
@@ -59,8 +59,8 @@ const AllProduct = ({ heading }) => {
                   id={el._id}
                   image={el.image}
                   name={el.name}
-                  category={el.category}
-                  price={el.price}
+                  category={el.tipus}
+                  price={el.quantitat}                  
                 />
               );
             })
